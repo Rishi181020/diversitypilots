@@ -37,7 +37,11 @@
 
   <script src="./scripts/include.js"></script>
   <script>
-    htmlInclude('header', './components/header.html').then(function () { initHeader('Diversity Pilots Initiative'); });
+    htmlInclude('header', './components/header.html').then(function () {
+      initHeader('Innovator Diversity Pilots Initiative');
+      var sub = document.getElementById('page-subtitle');
+      if (sub) { sub.textContent = 'Rigorous research to advance inclusion in innovation'; sub.classList.remove('hidden'); }
+    });
     htmlInclude('footer', './components/footer.html');
   </script>
 
